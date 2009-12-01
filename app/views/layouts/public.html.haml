@@ -1,0 +1,36 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %title
+      = h(yield(:title) || "The Charlotte 2.0 Internet Initiative") 
+    = javascript_include_tag "controllers/#{params[:controller]}"
+    = stylesheet_link_tag 'compiled/default.css'
+
+    = yield(:head)
+  %body
+    #header
+      #logo
+        = image_tag("logo.png", :border => "0")
+    
+      #subtitle
+        = image_tag("subtitle.png", :border => "0")
+  
+    #main
+      = render :partial => "layouts/flash"
+    
+      .left
+        = yield
+
+      #sidebar
+        = render :partial => "layouts/sidebar"
+    
+    #supporters
+      = render :partial => "list"
+    
+    #footer
+      .small
+        = mail_to "charlotte20@noctivity.com"
+        %br
+        (c) 2009/10 - 
+        = link_to "Noctivity, Inc.", "http://www.noctivity.com"

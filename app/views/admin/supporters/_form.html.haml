@@ -1,0 +1,29 @@
+- form_for [:admin, @supporter], :html => { :multipart => true } do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :company
+    %br
+    = f.text_field :company
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :website
+    %br
+    = f.text_field :website
+  %p
+    = f.label :comment
+    %br
+    = f.text_area :comment
+  %p
+    = f.label :logo
+    %br
+    = f.file_field :logo
+  
+  %p
+    = f.submit "Submit"

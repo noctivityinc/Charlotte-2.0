@@ -1,0 +1,44 @@
+@import partials/admin/products.sass
+@import partials/admin/answers.sass
+@import partials/admin/questions.sass
+@import partials/admin/items.sass
+
+.stamps
+  background: #E6E6E6
+  padding: 3px
+  margin: 20px 0px
+  font-size: .75em
+  overflow: hidden
+  
+  .created
+    +float-left
+    
+  .updated
+    margin-left: 20px
+    +float-left
+
+h2
+  .subtitle
+    color: gray
+    +alt
+
+#attachment_list
+  #pending_files
+    list-style: none
+    padding: 0
+
+  li
+    padding: 0 0 0.5em 21px
+    background: url('/images/attachment.png') no-repeat 0 2px
+
+    #remove
+      margin-left: 1em
+
+
+tr.inactive 
+  color: #999
+  font-size: .9em
+  
+  a
+    color: #999
+    font-size: .9em

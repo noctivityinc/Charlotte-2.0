@@ -1,0 +1,11 @@
+#user
+  #edit
+    - title "Edit Account: @user.name"
+
+    - form_for @user, :url => admin_user_url  do |f|
+      = f.error_messages
+      = render :partial => "form", :object => f
+      = f.submit "Update"
+
+    %br
+    = link_to "My Profile", admin_user_path

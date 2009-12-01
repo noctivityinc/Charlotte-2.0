@@ -1,0 +1,40 @@
+.nav
+  %h2 Supporting Charlotte 2.0
+  
+  - if @supporter.errors.blank?
+    %p
+      Please take a moment to join this initiative and let our city 
+      leaders know of the importance of fostering an innovative culture and 
+      attracting diverse, "new media" talent to Charlotte in 2010.
+    
+    %p
+      We will share the list of our supporters with our city leaders 
+      to bring our needs for a "web-focused workforce" to 
+      their immediate attention as they look to define Charlotte in the years to come.
+    
+  - form_for @supporter, :html => { :multipart => true }  do |f|
+    = error_messages_for :supporter, :header_message => "Please Try Again!", :message => "We have some problems with your entries:"
+    %p
+      = f.label :name, "your name"
+      = f.text_field :name
+    %p
+      = f.label :company
+      = f.text_field :company
+    %p
+      = f.label :email
+      = f.text_field :email
+    %p
+      = f.label :website
+      = f.text_field :website
+    %p
+      = f.label :logo
+      = f.file_field :logo, :size => 15 
+    %p
+      = f.label :comment
+      = f.text_area :comment
+    %p
+      = f.submit "Submit"
+      
+#twitter
+  = link_to image_tag("twit-bird.png", :border => "0"), "http://www.twitter.com/charlotte2dot0"
+  

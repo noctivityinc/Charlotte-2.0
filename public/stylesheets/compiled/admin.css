@@ -1,0 +1,107 @@
+/*
+Syntax error: Undefined variable: "!html_background".
+        on line 6 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass
+        from line 16 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass
+
+1: @import blueprint/modules/colors.sass
+2: 
+3: !base_font_size = 11pt
+4: !h1 = !base_font_size + 12
+5: !base_link = darken(#0000FF,20)
+6: !page_bg = #F1F1F1
+7: 
+8: !header_bg_color = #000
+9: !header_font_color = #fff
+10: !header_border_color = #999
+11: 
+
+Backtrace:
+/Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass:6
+/Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass:16
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/script/variable.rb:27:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/prop_node.rb:90:in `perform!'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/prop_node.rb:77:in `_perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:194:in `perform!'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/rule_node.rb:159:in `perform!'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/import_node.rb:38:in `perform!'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/root_node.rb:26:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:194:in `perform!'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/root_node.rb:26:in `perform'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:102:in `render'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:84:in `update_stylesheet'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:70:in `update_stylesheets'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:65:in `each'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:65:in `update_stylesheets'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:63:in `each'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:63:in `update_stylesheets'
+/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin/rails.rb:16:in `process_without_compass'
+/Users/jlippiner/.gem/ruby/1.8/gems/chriseppstein-compass-0.8.16/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"!html_background\".\A         on line 6 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass\A         from line 16 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass\A \A 1: @import blueprint/modules/colors.sass\A 2: \A 3: !base_font_size = 11pt\A 4: !h1 = !base_font_size + 12\A 5: !base_link = darken(#0000FF,20)\A 6: !page_bg = #F1F1F1\A 7: \A 8: !header_bg_color = #000\A 9: !header_font_color = #fff\A 10: !header_border_color = #999\A 11: "; }

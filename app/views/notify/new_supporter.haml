@@ -1,0 +1,45 @@
+%p
+  The following new company registered their support for The Charlotte 2.0 Initiative
+  = @supporter.created_at
+  from 
+  = "#{@supporter.name}:"
+  
+%p  
+  %table
+    %tr
+      %th
+        Name:
+      %td
+        = @supporter.name
+    %tr
+      %th
+        Company:
+      %td
+        = @supporter.company
+    %tr
+      %th
+        Email:
+      %td
+        = @supporter.email
+    %tr
+      %th
+        Website:
+      %td
+        = @supporter.website
+    %tr
+      %th
+        Logo Posted?
+      %td
+        = @supporter.logo.exists?
+    %tr
+      %th
+        Comment:
+      %td
+        = @supporter.comment
+  
+%p
+  %hr
+  
+%div(style="background: CCC; padding: 3px; font-size: 10px")
+  %b Created At:
+  = @supporter.created_at

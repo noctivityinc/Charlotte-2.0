@@ -1,0 +1,12 @@
+#user
+  #new
+    - title "New Administrative Account"
+    
+    - form_for [:admin, @user]  do |f|
+      = f.error_messages
+  
+      %p
+        = render :partial => "form", :object => f
+
+      %p
+        = f.submit "Register"

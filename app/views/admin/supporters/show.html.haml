@@ -1,0 +1,33 @@
+#supporter
+  #show
+    - title "Supporter"
+
+    - if @supporter.logo.exists?
+      %p
+        = image_tag(@supporter.logo.url(:medium), :border => "0")
+    %p
+      %strong Name:
+      =h @supporter.name
+    %p
+      %strong Company:
+      =h @supporter.company
+    %p
+      %strong Email:
+      =h @supporter.email
+    %p
+      %strong Website:
+      =h @supporter.website
+    %p
+      %strong Comment:
+      =h @supporter.comment
+    %p
+      %strong Created At:
+      =h @supporter.created_at      
+    
+
+    %p
+      = link_to "Edit", edit_admin_supporter_path(@supporter)
+      |
+      = link_to "Destroy", [:admin, @supporter], :confirm => 'Are you sure?', :method => :delete
+      |
+      = link_to "View All", admin_supporters_path

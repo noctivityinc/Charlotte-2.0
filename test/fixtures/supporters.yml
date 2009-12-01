@@ -1,0 +1,13 @@
+one:
+  name: MyString
+  company: MyString
+  email: MyString
+  website: MyString
+  comment: MyText
+
+two:
+  name: MyString
+  company: MyString
+  email: MyString
+  website: MyString
+  comment: MyText

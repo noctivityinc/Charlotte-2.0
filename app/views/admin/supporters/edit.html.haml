@@ -1,0 +1,10 @@
+#supporter
+  #index
+    - title "Edit Supporter"
+
+    = render :partial => 'form'
+
+    %p
+      = link_to "Show", admin_supporter_path(@supporter)
+      |
+      = link_to "View All", admin_supporters_path
