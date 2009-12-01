@@ -1146,28 +1146,34 @@ body {
     position: relative; }
     /* line 141, ../../../app/stylesheets/partials/_application.sass */
     body #supporters #with_logos, body #supporter #with_logos {
+      margin-top: 10px;
       overflow: hidden; }
-      /* line 144, ../../../app/stylesheets/partials/_application.sass */
+      /* line 145, ../../../app/stylesheets/partials/_application.sass */
       body #supporters #with_logos .supporter, body #supporter #with_logos .supporter {
         display: inline;
-        float: left; }
-    /* line 147, ../../../app/stylesheets/partials/_application.sass */
+        float: left;
+        width: 275px;
+        height: 100px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle; }
+    /* line 154, ../../../app/stylesheets/partials/_application.sass */
     body #supporters #without_logos, body #supporter #without_logos {
       overflow: hidden;
       bottom: 10px; }
-      /* line 151, ../../../app/stylesheets/partials/_application.sass */
+      /* line 158, ../../../app/stylesheets/partials/_application.sass */
       body #supporters #without_logos .supporter, body #supporter #without_logos .supporter {
         display: inline;
         float: left;
         margin-right: 10px; }
-  /* line 157, ../../../app/stylesheets/partials/_application.sass */
+  /* line 164, ../../../app/stylesheets/partials/_application.sass */
   body #footer {
     text-align: center;
     font-size: .9em;
     background: rgba(51,51,51,.25);
     padding: 15px 0px; }
 
-/* line 163, ../../../app/stylesheets/partials/_application.sass */
+/* line 170, ../../../app/stylesheets/partials/_application.sass */
 .green_button {
   border: 1px solid black;
   width: 15em;
@@ -1216,7 +1222,7 @@ body {
     cursor: pointer;
     background: lighten(green, 20%); }
 
-/* line 167, ../../../app/stylesheets/partials/_application.sass */
+/* line 174, ../../../app/stylesheets/partials/_application.sass */
 .info_box {
   margin: 5px;
   font-size: 11pt;
@@ -1225,7 +1231,7 @@ body {
   background: #ccc;
   color: black; }
 
-/* line 176, ../../../app/stylesheets/partials/_application.sass */
+/* line 183, ../../../app/stylesheets/partials/_application.sass */
 #errorExplanation {
   padding: .8em;
   margin-bottom: 1em;
@@ -1236,10 +1242,10 @@ body {
   /* line 30, ../../../../../.gem/ruby/1.8/gems/chriseppstein-compass-0.8.16/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
   #errorExplanation a {
     color: #8a1f11; }
-  /* line 179, ../../../app/stylesheets/partials/_application.sass */
+  /* line 186, ../../../app/stylesheets/partials/_application.sass */
   #errorExplanation ul {
     padding: 0; }
-    /* line 182, ../../../app/stylesheets/partials/_application.sass */
+    /* line 189, ../../../app/stylesheets/partials/_application.sass */
     #errorExplanation ul li {
       margin: 15px 0px;
       line-height: 1.1em; }
