@@ -16764,3 +16764,11 @@ Rendering template within layouts/admin
 Rendering admin/supporters/index
 Rendered layouts/_flash (0.2ms)
 Completed in 44ms (View: 11, DB: 3) | 200 OK [http://localhost/admin/supporters]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-30 21:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/websites/1/groups" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

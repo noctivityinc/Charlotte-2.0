@@ -1,8 +1,5 @@
 class Supporter < ActiveRecord::Base
   has_attached_file :logo, :styles => { :medium => "250x250>" }
-  validates_attachment_content_type :logo, 
-      :content_type => ["image/jpeg", "image/png", "image/gif", "image/jpg"], 
-      :message => "Oops! Make sure you are uploading an image file."
 
   validates_presence_of :name, :company, :email
   validates_uniqueness_of :company, :message => "Your company is already registered as supporting Charlotte 2.0.  Thank you."
