@@ -17409,3 +17409,13 @@ Rendered layouts/_sidebar (9.3ms)
   [4;35;1mSupporter Load (0.1ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
 Rendered supporters/_list (3.6ms)
 Completed in 109ms (View: 101, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-30 22:40:00) [GET]
+
+ActionController::RoutingError (No route matches "/websites/1/groups" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
