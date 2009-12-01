@@ -16795,3 +16795,617 @@ Rendering template within layouts/admin
 Rendering admin/supporters/index
 Rendered layouts/_flash (0.2ms)
 Completed in 169ms (View: 11, DB: 3) | 200 OK [http://localhost/admin/supporters]
+
+
+Processing SupportersController#index (for 127.0.0.1 at 2009-11-30 22:21:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"supporters"}
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (0.3ms)
+Rendered layouts/_sidebar (5.5ms)
+  [4;35;1mSupporter Load (1.5ms)[0m   [0mSELECT * FROM "supporters" WHERE (logo_file_name IS NOT NULL) [0m
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM "supporters" WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (6.1ms)
+Completed in 21ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SupportersController#create (for 127.0.0.1 at 2009-11-30 22:21:33) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"bGPd2POAffHM3b1re1c/5CzOchbhMDpRm+lnEKBDqP0=", "supporter"=>{"comment"=>"this is a test", "company"=>"Noctivity Inc.", "name"=>"Josh", "website"=>"http://www.test.com", "email"=>"jlippiner@gmail.com"}, "controller"=>"supporters"}
+  [4;35;1mSupporter Load (0.2ms)[0m   [0mSELECT "supporters".id FROM "supporters" WHERE ("supporters"."company" = 'Noctivity Inc.') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (0.2ms)
+Rendered layouts/_sidebar (64.4ms)
+  [4;36;1mSupporter Load (1.6ms)[0m   [0;1mSELECT * FROM "supporters" WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM "supporters" WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (6.2ms)
+Completed in 84ms (View: 71, DB: 2) | 200 OK [http://localhost/supporters]
+
+
+Processing SupportersController#create (for 127.0.0.1 at 2009-11-30 22:21:39) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"bGPd2POAffHM3b1re1c/5CzOchbhMDpRm+lnEKBDqP0=", "supporter"=>{"comment"=>"this is a test", "company"=>"Noctivity Inc", "name"=>"Josh", "website"=>"http://www.test.com", "email"=>"jlippiner@gmail.com"}, "controller"=>"supporters"}
+  [4;36;1mSupporter Load (0.1ms)[0m   [0;1mSELECT "supporters".id FROM "supporters" WHERE ("supporters"."company" = 'Noctivity Inc') LIMIT 1[0m
+  [4;35;1mSupporter Create (0.3ms)[0m   [0mINSERT INTO "supporters" ("name", "company", "comment", "logo_updated_at", "created_at", "updated_at", "logo_file_name", "website", "logo_content_type", "logo_file_size", "email") VALUES('Josh', 'Noctivity Inc', 'this is a test', NULL, '2009-12-01 03:21:39', '2009-12-01 03:21:39', NULL, 'http://www.test.com', NULL, NULL, 'jlippiner@gmail.com')[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/
+Completed in 59ms (DB: 0) | 302 Found [http://localhost/supporters]
+
+
+Processing SupportersController#index (for 127.0.0.1 at 2009-11-30 22:21:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"supporters"}
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (0.5ms)
+Rendered layouts/_sidebar (5.8ms)
+  [4;36;1mSupporter Load (1.6ms)[0m   [0;1mSELECT * FROM "supporters" WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.8ms)[0m   [0mSELECT * FROM "supporters" WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (6.8ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SupportersController#create (for 127.0.0.1 at 2009-11-30 22:22:33) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"bGPd2POAffHM3b1re1c/5CzOchbhMDpRm+lnEKBDqP0=", "supporter"=>{"comment"=>"this is a test", "company"=>"Noctivity Incs", "name"=>"Josh", "website"=>"http://www.test.com", "email"=>"jlippiner@gmail.com"}, "controller"=>"supporters"}
+  [4;36;1mSupporter Load (0.1ms)[0m   [0;1mSELECT "supporters".id FROM "supporters" WHERE ("supporters"."company" = 'Noctivity Incs') LIMIT 1[0m
+  [4;35;1mSupporter Create (0.3ms)[0m   [0mINSERT INTO "supporters" ("name", "company", "comment", "logo_updated_at", "created_at", "updated_at", "logo_file_name", "website", "logo_content_type", "logo_file_size", "email") VALUES('Josh', 'Noctivity Incs', 'this is a test', NULL, '2009-12-01 03:22:33', '2009-12-01 03:22:33', NULL, 'http://www.test.com', NULL, NULL, 'jlippiner@gmail.com')[0m
+[paperclip] Saving attachments.
+Sent mail to jlippiner@gmail.com
+
+Date: Mon, 30 Nov 2009 22:22:33 -0500
+From: charlotte20@noctivity.com
+To: jlippiner@gmail.com
+Subject: Thank you for supporting Charlotte 2.0
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Josh,
+</p>
+<p>
+  Thank you registering your support for the Charlotte 2.0 initiative.  By joining together we truly believe
+  that we have the best chance of having our voices heard.
+</p>
+<p>
+  As a member of this community, you understand the importance of creating a diverse and unique
+  environment that welcomes and fosters innovation.  While Charlotte is many things, a "tech hub"
+  we are not and may never be.
+</p>
+<p>
+  Hopefully, through our efforts, seeds can be planted.  By starting this dialogue, Charlotte ten
+  years from now might have its own "Silicon Alley," with fresh, young innovators creating
+  something amazing and attracting the type of talent we all would love to see attracted to our
+  city.
+</p>
+<p>
+  Please take a moment to consider who else in our small community might benefit from bringing
+  a "web-focused workforce" to Charlotte.  Please send them a note, post a "Tweet" or even give
+  them a call and ask them to register their support at
+  <a href="http://www.charlotte20.com">www.charlotte20.com</a>
+  .
+</p>
+<p>
+  As we begin our conversations with our city representatives, we will continue to update our
+  community of the discussions.  Hopefully, together, we can make a difference in our
+  collective tomorrow.
+</p>
+<br />
+<p>
+  Best Regards,
+</p>
+<p>
+  <b>
+    The Charlotte 2.0 Initiative
+  </b>
+</p>
+<div style='margin-top:40px; padding-top: 10px; border-top: 1px dotted #CCC;font-size:9px'>
+  This message was sent by The Charlotte 2.0 Initiative on
+  Mon Nov 30 22:22:33 -0500 2009
+  through
+  <a href="http://www.charlotte20.com">http://www.charlotte20.com</a>
+</div>
+Sent mail to charlotte20@noctivity.com
+
+Date: Mon, 30 Nov 2009 22:22:34 -0500
+From: jlippiner@gmail.com
+To: charlotte20@noctivity.com
+Subject: New Charlotte 2.0 Supporter: Noctivity Incs
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  The following new company registered their support for The Charlotte 2.0 Initiative
+  2009-12-01 03:22:33 UTC
+  from
+  Josh:
+</p>
+<p>
+  <table>
+    <tr>
+      <th>
+        Name:
+      </th>
+      <td>
+        Josh
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Company:
+      </th>
+      <td>
+        Noctivity Incs
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Email:
+      </th>
+      <td>
+        jlippiner@gmail.com
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Website:
+      </th>
+      <td>
+        http://www.test.com
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Logo Posted?
+      </th>
+      <td>
+        false
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Comment:
+      </th>
+      <td>
+        this is a test
+      </td>
+    </tr>
+  </table>
+</p>
+<p>
+  <hr />
+</p>
+<div style='background: CCC; padding: 3px; font-size: 10px'>
+  <b>Created At:</b>
+  2009-12-01 03:22:33 UTC
+</div>
+Redirected to http://localhost:3000/
+Completed in 493ms (DB: 0) | 302 Found [http://localhost/supporters]
+
+
+Processing SupportersController#index (for 127.0.0.1 at 2009-11-30 22:22:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"supporters"}
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (0.5ms)
+Rendered layouts/_sidebar (5.7ms)
+  [4;36;1mSupporter Load (1.9ms)[0m   [0;1mSELECT * FROM "supporters" WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (1.0ms)[0m   [0mSELECT * FROM "supporters" WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (7.4ms)
+Completed in 26ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+/!\ FAILSAFE /!\  Mon Nov 30 22:23:56 -0500 2009
+  Status: 500 Internal Server Error
+  Unknown database 'charlotte20_dev'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `real_connect'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/rails/rack/debugger.rb:17:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/jlippiner/.gem/ruby/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (244.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (209.8ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdminSupporters (20091130170436)
+  [4;35;1mSQL (118.1ms)[0m   [0mCREATE TABLE `supporters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `company` varchar(255), `email` varchar(255), `website` varchar(255), `comment` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (23.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091130170436')[0m
+Migrating to CreateUserTable (20091130185820)
+  [4;35;1mSQL (123.5ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `login` varchar(255) NOT NULL, `email` varchar(255) NOT NULL, `crypted_password` varchar(255) NOT NULL, `password_salt` varchar(255) NOT NULL, `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091130185820')[0m
+Migrating to AddLogoToSupporters (20091130210754)
+  [4;35;1mSQL (116.5ms)[0m   [0mALTER TABLE `supporters` ADD `logo_file_name` varchar(255)[0m
+  [4;36;1mSQL (106.4ms)[0m   [0;1mALTER TABLE `supporters` ADD `logo_content_type` varchar(255)[0m
+  [4;35;1mSQL (90.1ms)[0m   [0mALTER TABLE `supporters` ADD `logo_file_size` int(11)[0m
+  [4;36;1mSQL (91.2ms)[0m   [0;1mALTER TABLE `supporters` ADD `logo_updated_at` datetime[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091130210754')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.4ms)[0m   [0mSHOW FIELDS FROM `supporters`[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mdescribe `supporters`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW KEYS FROM `supporters`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (6.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'jlippiner@repuguard.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'jlippiner') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`persistence_token` = BINARY '77730c7059de3565af67e03a93c52da25d97e443c679de62d38a89efcee029fd85b6e7cfa256e85ef11ff90ec89a8472f1f8f0500775761d4c3484ce3c06a1c0') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`single_access_token` = BINARY 'EQJs4EgGRfLGPIIpk4z2') LIMIT 1[0m
+  [4;36;1mUser Create (0.8ms)[0m   [0;1mINSERT INTO `users` (`name`, `single_access_token`, `last_request_at`, `created_at`, `crypted_password`, `perishable_token`, `updated_at`, `failed_login_count`, `current_login_ip`, `password_salt`, `current_login_at`, `persistence_token`, `login_count`, `last_login_ip`, `login`, `last_login_at`, `email`) VALUES('Joshua Lippiner', 'EQJs4EgGRfLGPIIpk4z2', NULL, '2009-12-01 03:24:19', 'dc30536b0f2aa1cea520a777943eb4af409be6bb7c25f9ad3cd161aea0e33b558f1df1bada1eb3be876315400937a1806ff854fb59c3a46dbb051e89266445e5', 'SE8kHxHJ-L2wWaSJivAG', '2009-12-01 03:24:19', 0, NULL, '93Vofj_zcODAuekshuuQ', NULL, '77730c7059de3565af67e03a93c52da25d97e443c679de62d38a89efcee029fd85b6e7cfa256e85ef11ff90ec89a8472f1f8f0500775761d4c3484ce3c06a1c0', 0, NULL, 'jlippiner', NULL, 'jlippiner@repuguard.com')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SupportersController#create (for 127.0.0.1 at 2009-11-30 22:24:28) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"bGPd2POAffHM3b1re1c/5CzOchbhMDpRm+lnEKBDqP0=", "supporter"=>{"comment"=>"another comment", "company"=>"Test Co1", "name"=>"Josh", "website"=>"http://www.test.com", "email"=>"jlippiner@gmail.com"}, "controller"=>"supporters"}
+  [4;36;1mSupporter Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mSQL (40.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT `supporters`.id FROM `supporters` WHERE (`supporters`.`company` = BINARY 'Test Co1') LIMIT 1[0m
+  [4;35;1mSupporter Create (0.2ms)[0m   [0mINSERT INTO `supporters` (`name`, `company`, `comment`, `logo_updated_at`, `created_at`, `updated_at`, `logo_file_name`, `website`, `logo_content_type`, `logo_file_size`, `email`) VALUES('Josh', 'Test Co1', 'another comment', NULL, '2009-12-01 03:24:28', '2009-12-01 03:24:28', NULL, 'http://www.test.com', NULL, NULL, 'jlippiner@gmail.com')[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Sent mail to jlippiner@gmail.com
+
+Date: Mon, 30 Nov 2009 22:24:28 -0500
+From: charlotte20@noctivity.com
+To: jlippiner@gmail.com
+Subject: Thank you for supporting Charlotte 2.0
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Josh,
+</p>
+<p>
+  Thank you registering your support for the Charlotte 2.0 initiative.  By joining together we truly believe
+  that we have the best chance of having our voices heard.
+</p>
+<p>
+  As a member of this community, you understand the importance of creating a diverse and unique
+  environment that welcomes and fosters innovation.  While Charlotte is many things, a "tech hub"
+  we are not and may never be.
+</p>
+<p>
+  Hopefully, through our efforts, seeds can be planted.  By starting this dialogue, Charlotte ten
+  years from now might have its own "Silicon Alley," with fresh, young innovators creating
+  something amazing and attracting the type of talent we all would love to see attracted to our
+  city.
+</p>
+<p>
+  Please take a moment to consider who else in our small community might benefit from bringing
+  a "web-focused workforce" to Charlotte.  Please send them a note, post a "Tweet" or even give
+  them a call and ask them to register their support at
+  <a href="http://www.charlotte20.com">www.charlotte20.com</a>
+  .
+</p>
+<p>
+  As we begin our conversations with our city representatives, we will continue to update our
+  community of the discussions.  Hopefully, together, we can make a difference in our
+  collective tomorrow.
+</p>
+<br />
+<p>
+  Best Regards,
+</p>
+<p>
+  <b>
+    The Charlotte 2.0 Initiative
+  </b>
+</p>
+<div style='margin-top:40px; padding-top: 10px; border-top: 1px dotted #CCC;font-size:9px'>
+  This message was sent by The Charlotte 2.0 Initiative on
+  Mon Nov 30 22:24:28 -0500 2009
+  through
+  <a href="http://www.charlotte20.com">http://www.charlotte20.com</a>
+</div>
+Sent mail to charlotte20@noctivity.com
+
+Date: Mon, 30 Nov 2009 22:24:29 -0500
+From: jlippiner@gmail.com
+To: charlotte20@noctivity.com
+Subject: New Charlotte 2.0 Supporter: Test Co1
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  The following new company registered their support for The Charlotte 2.0 Initiative
+  2009-12-01 03:24:28 UTC
+  from
+  Josh:
+</p>
+<p>
+  <table>
+    <tr>
+      <th>
+        Name:
+      </th>
+      <td>
+        Josh
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Company:
+      </th>
+      <td>
+        Test Co1
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Email:
+      </th>
+      <td>
+        jlippiner@gmail.com
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Website:
+      </th>
+      <td>
+        http://www.test.com
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Logo Posted?
+      </th>
+      <td>
+        false
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Comment:
+      </th>
+      <td>
+        another comment
+      </td>
+    </tr>
+  </table>
+</p>
+<p>
+  <hr />
+</p>
+<div style='background: CCC; padding: 3px; font-size: 10px'>
+  <b>Created At:</b>
+  2009-12-01 03:24:28 UTC
+</div>
+Redirected to http://localhost:3000/
+Completed in 1729ms (DB: 44) | 302 Found [http://localhost/supporters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SupportersController#index (for 127.0.0.1 at 2009-11-30 22:24:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"supporters"}
+  [4;35;1mSupporter Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `supporters`[0m
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (1.0ms)
+Rendered layouts/_sidebar (9.6ms)
+  [4;36;1mSupporter Load (18.1ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.2ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (22.0ms)
+Completed in 129ms (View: 103, DB: 20) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSupporter Load (0.2ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+  [4;35;1mSupporter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `supporters`[0m
+  [4;36;1mSupporter Load (0.4ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+[paperclip] Deleting attachments.
+  [4;36;1mSupporter Destroy (50.4ms)[0m   [0;1mDELETE FROM `supporters` WHERE `id` = 1[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SupportersController#create (for 127.0.0.1 at 2009-11-30 22:26:32) [POST]
+  Parameters: {"commit"=>"Submit", "action"=>"create", "authenticity_token"=>"bGPd2POAffHM3b1re1c/5CzOchbhMDpRm+lnEKBDqP0=", "supporter"=>{"comment"=>"another comment", "company"=>"Test Co1", "name"=>"Josh", "website"=>"http://www.test.com", "email"=>"jlippiner@gmail.com"}, "controller"=>"supporters"}
+  [4;36;1mSupporter Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mSQL (35.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT `supporters`.id FROM `supporters` WHERE (`supporters`.`company` = BINARY 'Test Co1') LIMIT 1[0m
+  [4;35;1mSupporter Create (0.2ms)[0m   [0mINSERT INTO `supporters` (`name`, `company`, `comment`, `logo_updated_at`, `created_at`, `updated_at`, `logo_file_name`, `website`, `logo_content_type`, `logo_file_size`, `email`) VALUES('Josh', 'Test Co1', 'another comment', NULL, '2009-12-01 03:26:32', '2009-12-01 03:26:32', NULL, 'http://www.test.com', NULL, NULL, 'jlippiner@gmail.com')[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Sent mail to jlippiner@gmail.com
+
+Date: Mon, 30 Nov 2009 22:26:32 -0500
+From: charlotte20@noctivity.com
+To: jlippiner@gmail.com
+Subject: Thank you for supporting Charlotte 2.0
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  Josh,
+</p>
+<p>
+  Thank you registering your support for the Charlotte 2.0 initiative.  By joining together we truly believe
+  that we have the best chance of having our voices heard.
+</p>
+<p>
+  As a member of this community, you understand the importance of creating a diverse and unique
+  environment that welcomes and fosters innovation.  While Charlotte is many things, a "tech hub"
+  we are not and may never be.
+</p>
+<p>
+  Hopefully, through our efforts, seeds can be planted.  By starting this dialogue, Charlotte ten
+  years from now might have its own "Silicon Alley," with fresh, young innovators creating
+  something amazing and attracting the type of talent we all would love to see attracted to our
+  city.
+</p>
+<p>
+  Please take a moment to consider who else in our small community might benefit from bringing
+  a "web-focused workforce" to Charlotte.  Please send them a note, post a "Tweet" or even give
+  them a call and ask them to register their support at
+  <a href="http://www.charlotte20.com">www.charlotte20.com</a>
+  .
+</p>
+<p>
+  As we begin our conversations with our city representatives, we will continue to update our
+  community of the discussions.  Hopefully, together, we can make a difference in our
+  collective tomorrow.
+</p>
+<br />
+<p>
+  Best Regards,
+</p>
+<p>
+  <b>
+    The Charlotte 2.0 Initiative
+  </b>
+</p>
+<div style='margin-top:40px; padding-top: 10px; border-top: 1px dotted #CCC;font-size:9px'>
+  This message was sent by The Charlotte 2.0 Initiative on
+  Mon Nov 30 22:26:32 -0500 2009
+  through
+  <a href="http://www.charlotte20.com">http://www.charlotte20.com</a>
+</div>
+Sent mail to charlotte20@noctivity.com
+
+Date: Mon, 30 Nov 2009 22:26:33 -0500
+From: jlippiner@gmail.com
+To: charlotte20@noctivity.com
+Subject: New Charlotte 2.0 Supporter: Test Co1
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+  The following new company registered their support for The Charlotte 2.0 Initiative
+  2009-12-01 03:26:32 UTC
+  from
+  Josh:
+</p>
+<p>
+  <table>
+    <tr>
+      <th>
+        Name:
+      </th>
+      <td>
+        Josh
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Company:
+      </th>
+      <td>
+        Test Co1
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Email:
+      </th>
+      <td>
+        jlippiner@gmail.com
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Website:
+      </th>
+      <td>
+        http://www.test.com
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Logo Posted?
+      </th>
+      <td>
+        false
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Comment:
+      </th>
+      <td>
+        another comment
+      </td>
+    </tr>
+  </table>
+</p>
+<p>
+  <hr />
+</p>
+<div style='background: CCC; padding: 3px; font-size: 10px'>
+  <b>Created At:</b>
+  2009-12-01 03:26:32 UTC
+</div>
+Redirected to http://localhost:3000/
+Completed in 3314ms (DB: 39) | 302 Found [http://localhost/supporters]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SupportersController#index (for 127.0.0.1 at 2009-11-30 22:26:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"supporters"}
+  [4;35;1mSupporter Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `supporters`[0m
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (0.9ms)
+Rendered layouts/_sidebar (9.3ms)
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.1ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (3.6ms)
+Completed in 109ms (View: 101, DB: 2) | 200 OK [http://localhost/]
