@@ -16772,3 +16772,26 @@ ActionController::RoutingError (No route matches "/websites/1/groups" with {:met
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing SupportersController#index (for 127.0.0.1 at 2009-11-30 21:48:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"supporters"}
+Rendering template within layouts/public
+Rendering supporters/index
+Rendered layouts/_flash (0.5ms)
+Rendered layouts/_sidebar (5.7ms)
+  [4;36;1mSupporter Load (1.6ms)[0m   [0;1mSELECT * FROM "supporters" WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM "supporters" WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_list (6.3ms)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing Admin::SupportersController#index (for 127.0.0.1 at 2009-11-30 21:48:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/supporters"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2009-12-01 02:48:12', "perishable_token" = 'kg1xZKrCgra9oC5p0BP-', "last_request_at" = '2009-12-01 02:48:12' WHERE "id" = 1[0m
+  [4;36;1mSupporter Load (1.9ms)[0m   [0;1mSELECT * FROM "supporters" ORDER BY created_at asc[0m
+Rendering template within layouts/admin
+Rendering admin/supporters/index
+Rendered layouts/_flash (0.2ms)
+Completed in 169ms (View: 11, DB: 3) | 200 OK [http://localhost/admin/supporters]

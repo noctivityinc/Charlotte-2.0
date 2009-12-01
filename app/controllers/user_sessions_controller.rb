@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash.message = "Login successful!"
-      redirect_back_or_default admin_url
+      redirect_back_or_default admin_session_url
     else
       render :action => :new
     end
