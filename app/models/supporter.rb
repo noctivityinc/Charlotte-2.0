@@ -4,7 +4,7 @@ class Supporter < ActiveRecord::Base
       :content_type => ["image/jpeg", "image/png", "image/gif", "image/jpg"], 
       :message => "Oops! Make sure you are uploading an image file."
 
-  validates_presence_of :name, :company, :email
+  validates_presence_of :name, :email
   validates_uniqueness_of :company, :message => "Your company is already registered as supporting Charlotte 2.0.  Thank you."
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
 

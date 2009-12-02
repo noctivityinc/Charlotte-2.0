@@ -1180,7 +1180,7 @@ body {
         display: inline;
         float: left;
         width: 275px;
-        height: 100px;
+        min-height: 150px;
         text-align: center;
         display: table-cell;
         vertical-align: middle; }
