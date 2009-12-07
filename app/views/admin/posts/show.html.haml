@@ -1,0 +1,17 @@
+#post
+  #show
+    - title "Post"
+
+    %p
+      %strong Title:
+      =h @post.title
+    %p
+      %strong Body:
+      =h @post.body
+
+    %p
+      = link_to "Edit", edit_admin_post_path(@post)
+      |
+      = link_to "Destroy", [:admin, @post], :confirm => 'Are you sure?', :method => :delete
+      |
+      = link_to "View All", admin_posts_path

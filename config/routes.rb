@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.namespace(:admin) do |admin|
+     admin.resources :posts
+  end
+
+  map.namespace(:admin) do |admin|
     admin.resource :users
     admin.resources :supporters
     map.resources :admin

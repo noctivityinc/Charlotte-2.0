@@ -1,0 +1,10 @@
+#post
+  #index
+    - title "Edit Post"
+
+    = render :partial => 'form'
+
+    %p
+      = link_to "Show", admin_post_path(@post)
+      |
+      = link_to "View All", admin_posts_path

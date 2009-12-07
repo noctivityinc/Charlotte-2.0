@@ -22,6 +22,7 @@ Rails::Initializer.run do |config|
   config.gem 'chriseppstein-compass', :lib => 'compass', :source => "http://gems.github.com", :version => '>=0.8.16'
   config.gem 'chriseppstein-compass-colors', :source => "http://gems.github.com",  :lib => 'compass'
   config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
+  config.gem "acts-as-taggable-on", :source => "http://gemcutter.org"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

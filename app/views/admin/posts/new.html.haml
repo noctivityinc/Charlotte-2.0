@@ -1,0 +1,7 @@
+#post
+  #new
+    - title "New Post"
+
+    = render :partial => 'form'
+
+    %p= link_to "<< Back to List", admin_posts_path

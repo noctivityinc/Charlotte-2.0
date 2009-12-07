@@ -1,0 +1,111 @@
+#main    
+  #sidebar
+    margin-top: 5px
+    background: url(/images/line-v.png)  repeat-y 
+    width: 200px
+    
+    #twitter
+      margin-top: 50px
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
+      background: #DDD
+      background: rgba(51,51,51,.1)
+      position: relative
+      -webkit-transition: background .3s
+
+      &:hover
+        background: #DDD
+        background: rgba(51,51,51,.2)
+
+      a
+        display: block
+        background: url(/images/twit-follow.png) no-repeat 10px 50%
+        text-indent: -9999px
+        height: 50px
+        overflow: hidden
+
+      img
+        position: absolute
+        right: 5px
+        top: -10px
+
+    #linkedin
+      margin-top: 50px
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
+      background: #DDD
+      background: rgba(51,51,51,.1)
+      position: relative
+      -webkit-transition: background .3s
+      cursor: pointer
+
+      &:hover
+        background: #DDD
+        background: rgba(51,51,51,.2)
+
+      a
+        display: block
+        overflow: hidden
+        text-transform: uppercase
+        padding: 3px 20px 0px 15px
+        color: #333
+        text-decoration: none
+
+      img
+        position: absolute
+        right: 5px
+        top: -10px
+
+    
+    .nav
+      -moz-border-radius: 5px
+      -webkit-border-radius: 5px
+      -webkit-transition: all .2s
+      background: #DDD
+      background: rgba(51,51,51,.1)
+      padding: 5px 10px 2px
+      margin-bottom: 10px
+
+      .items
+        width: 180px
+        margin-bottom: 10px
+        overflow: hidden
+        
+      text-transform: uppercase
+
+      h2
+        font-family: 'MuseoCustom', 'Century Gothic', Arial, Helvetica, sans-serif
+        line-height: 1.2
+        font-size: 1em
+        background: url(/images/arrow-dn.png) no-repeat 100% 5px
+        font-weight: bold
+        margin: 0 0 20 0
+        padding: 0
+        line-height: 20px
+        color: #666
+
+        &.collapsed
+          background-image: url(/img/arrow-dn.png)
+
+      h3
+        text-transform: uppercase
+        margin: 0
+        font-size: 12px
+        
+      p
+        font-size: .95em
+        
+      form
+        input, textarea
+          width: 200px
+          
+      .fieldWithErrors
+        color: red
+        margin: 0px
+        padding: 0px
+        
+        input
+          +border-red
+          color: black
+          margin: 0px
+    
