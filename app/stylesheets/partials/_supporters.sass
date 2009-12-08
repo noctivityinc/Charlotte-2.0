@@ -1,32 +1,31 @@
-#main
-  #supporters_right
-    background: url(/images/line-v.png)  repeat-y 
-    width: 260px
-    background: white
+#supporters
+  .list
+    margin-top: 50px
+    background: #FFF url(/images/line.png) repeat-x 
+    border-top: 1px solid #999
+    padding: 5px
+    text-transform: uppercase
+    color: #666
+    position: relative
+  
+    #with_logos
+      margin-top: 10px
+      overflow: hidden
     
-
-#supporters_bottom, #supporter
-  background: #FFF url(/images/line.png) repeat-x 
-  border-top: 1px solid #999
-  padding: 5px
-  text-transform: uppercase
-  color: #666
-  position: relative
-
-  #with_logos
-  margin-top: 10px
-  overflow: hidden
-
-  .supporter
-    +float-left
-    width: 275px
-    text-align: center
-
-
-  #without_logos
-  overflow: hidden
-  bottom: 10px
-
-  .supporter
-    +float-left
-    margin-right: 10px
+      .supporter
+        +float-left
+        width: 275px
+        min-height: 150px
+        text-align: center
+        display: table-cell
+        vertical-align: middle
+      
+    
+    #without_logos
+      overflow: hidden
+      bottom: 10px
+    
+      .supporter
+        +float-left
+        margin-right: 10px
+  

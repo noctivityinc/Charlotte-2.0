@@ -1,5 +1,9 @@
 @import partials/base.sass
 @import partials/facebox_content.sass
+@import partials/supporters.sass
+@import partials/posts.sass
+@import partials/admin/admin.sass
+@import partials/sidebar.sass      
 
 html, body
   padding: 0
@@ -29,166 +33,34 @@ body
     h1
       font-size: 1.50em
       font-weight: bold
-      color: #003366
+      color: #408000
       
     h2
       font-size: 1.25em
       font-weight: bold
+      
+    .title
+      margin-top: 20px
+      font-size: 2em
 
-    .left
-      background: url(/images/page-marker.png) no-repeat
+    #content
       +float-left
       width: 525px
-      padding-left: 20px
-      padding-top: 40px
-      
-      
-    #sidebar
-      +float-right
-      margin-top: 5px
-      padding-left: 10px
-      background: url(/images/line-v.png)  repeat-y 
-      width: 250px
-      
-      #twitter
-        margin-top: 50px
-        -moz-border-radius: 5px
-        -webkit-border-radius: 5px
-        background: #DDD
-        background: rgba(51,51,51,.1)
-        position: relative
-        -webkit-transition: background .3s
 
-        &:hover
-          background: #DDD
-          background: rgba(51,51,51,.2)
+    .fieldWithErrors
+      color: red
+      margin: 0px
+      padding: 0px
+      display: inline
 
-        a
-          display: block
-          background: url(/images/twit-follow.png) no-repeat 10px 50%
-          text-indent: -9999px
-          height: 50px
-          overflow: hidden
-
-        img
-          position: absolute
-          right: 5px
-          top: -10px
-
-      #linkedin
-        margin-top: 50px
-        -moz-border-radius: 5px
-        -webkit-border-radius: 5px
-        background: #DDD
-        background: rgba(51,51,51,.1)
-        position: relative
-        -webkit-transition: background .3s
-        cursor: pointer
-
-        &:hover
-          background: #DDD
-          background: rgba(51,51,51,.2)
-
-        a
-          display: block
-          overflow: hidden
-          text-transform: uppercase
-          padding: 3px 20px 0px 15px
-          color: #333
-          text-decoration: none
-
-        img
-          position: absolute
-          right: 5px
-          top: -10px
-
-      
-      .nav
-        -moz-border-radius: 5px
-        -webkit-border-radius: 5px
-        -webkit-transition: all .2s
-        background: #DDD
-        background: rgba(51,51,51,.1)
-        padding: 5px 10px 2px
-        margin-bottom: 10px
-
-        .items
-          width: 180px
-          margin-bottom: 10px
-          overflow: hidden
+      input
+        +border-red
+        color: black
+        margin: 0px
           
-        text-transform: uppercase
-
-        h2
-          font-family: 'MuseoCustom', 'Century Gothic', Arial, Helvetica, sans-serif
-          line-height: 1.2
-          font-size: 1em
-          background: url(/images/arrow-dn.png) no-repeat 100% 5px
-          font-weight: bold
-          margin: 0 0 20 0
-          padding: 0
-          line-height: 20px
-          color: #666
-
-          &.collapsed
-            background-image: url(/img/arrow-dn.png)
-
-        h3
-          text-transform: uppercase
-          margin: 0
-          font-size: 12px
-          
-        p
-          font-size: .95em
-          
-        form
-          input, textarea
-            width: 200px
-            
-        .fieldWithErrors
-          color: red
-          margin: 0px
-          padding: 0px
-          
-          input
-            +border-red
-            color: black
-            margin: 0px
-      
-          
-
-  #supporters, #supporter
-    background: #FFF url(/images/line.png) repeat-x 
-    border-top: 1px solid #999
-    padding: 5px
-    text-transform: uppercase
-    color: #666
-    position: relative
-    
-    #with_logos
-      margin-top: 10px
-      overflow: hidden
-      
-      .supporter
-        +float-left
-        width: 275px
-        min-height: 150px
-        text-align: center
-        display: table-cell
-        vertical-align: middle
-        
-      
-    #without_logos
-      overflow: hidden
-      bottom: 10px
-      
-      .supporter
-        +float-left
-        margin-right: 10px
-    
-
   
   #footer
+    margin-top: 20px
     text-align: center
     font-size: .9em
     background: rgba(51,51,51,.25)
@@ -217,3 +89,5 @@ body
       margin: 15px 0px
       line-height: 1.1em
       
+      
+

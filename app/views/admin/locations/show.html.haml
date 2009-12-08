@@ -1,0 +1,32 @@
+#location
+  #show
+    - title "Location"
+
+    %p
+      %strong Name:
+      =h @location.name
+    %p
+      %strong Location Type:
+      =h @location.location_type_id
+    %p
+      %strong Address:
+      =h @location.address
+    %p
+      %strong Zip:
+      =h @location.zip
+    %p
+      %strong Note:
+      =h @location.note
+    %p
+      %strong Phone:
+      =h @location.phone
+    %p
+      %strong City:
+      =h @location.city
+
+    %p
+      = link_to "Edit", edit_admin_location_path(@location)
+      |
+      = link_to "Destroy", [:admin, @location], :confirm => 'Are you sure?', :method => :delete
+      |
+      = link_to "View All", admin_locations_path

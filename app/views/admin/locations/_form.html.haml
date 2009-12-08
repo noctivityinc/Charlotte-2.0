@@ -1,0 +1,32 @@
+- form_for [:admin, @location] do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :location_type_id
+    %br
+    = f.text_field :location_type_id
+  %p
+    = f.label :address
+    %br
+    = f.text_field :address
+  %p
+    = f.label :zip
+    %br
+    = f.text_field :zip
+  %p
+    = f.label :note
+    %br
+    = f.text_field :note
+  %p
+    = f.label :phone
+    %br
+    = f.text_field :phone
+  %p
+    = f.label :city
+    %br
+    = f.text_field :city
+  %p
+    = f.submit "Submit"

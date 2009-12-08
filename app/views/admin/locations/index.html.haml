@@ -1,0 +1,28 @@
+#locations
+  #index
+    - title "Locations"
+
+    %table
+      %tr
+        %th Name
+        %th Location type
+        %th Address
+        %th Zip
+        %th Note
+        %th Phone
+        %th City
+        %th(colspan="3")
+      - for location in @locations
+        %tr
+          %td= h location.name
+          %td= h location.location_type_id
+          %td= h location.address
+          %td= h location.zip
+          %td= h location.note
+          %td= h location.phone
+          %td= h location.city
+          %td= link_to 'Show', [:admin, location]
+          %td= link_to 'Edit', edit_admin_location_path(location)
+          %td= link_to 'Destroy', [:admin, location], :confirm => 'Are you sure?', :method => :delete
+
+    %p= link_to "+ New Location", new_admin_location_path

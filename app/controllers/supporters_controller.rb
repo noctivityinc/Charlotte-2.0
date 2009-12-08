@@ -14,10 +14,11 @@ class SupportersController < PublicController
       flash[:notice] = "Thank you for supporting Charlotte 2.0"
       Notify.deliver_thankyou(@supporter)
       Notify.deliver_new_supporter(@supporter)
+      session[:support_registered] = true
       redirect_to root_url
     else
-      flash[:error] = "There was a problem saving your information.  Please see the form on the right."
-      render :action => 'index'
+      @hide_sidebar_form = true
+      render :action => 'new'
     end
   end
 

@@ -1,0 +1,48 @@
+.post
+  background: url(/images/star.png) no-repeat 5px 30px
+  
+.post, #show
+  +float-left
+  width: 525px
+  padding-left: 20px
+    
+  &.top
+    background: url(/images/page-marker.png) no-repeat
+    padding-top: 20px
+
+    .title
+      background: url(/images/line.png) no-repeat bottom left
+      margin: 3px
+
+  .date
+    text-transform: uppercase
+    color: #666
+    font-weight: bold
+    font-size: .80em
+    background: url(/images/line.png) no-repeat bottom left
+
+  .tags, .permalink
+    font-style: italic
+    font-size: .9em
+
+  .body
+    margin-top: 20px
+    
+  .summary
+    margin-top: 10px
+    
+  .read_more
+    margin-top: 10px
+    text-align: right 
+
+    a
+      font-weight: bold
+      font-size: .9em
+      color: #408000
+    
+      &:hover
+        background: rgba(51,51,51,.1)
+        cursor: pointer
+        text-decoration: underline
+        padding: 5px
+        

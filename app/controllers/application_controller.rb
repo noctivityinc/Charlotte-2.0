@@ -5,18 +5,37 @@ class ApplicationController < ActionController::Base
 
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
-  
+  before_filter :set_page
+
   def load_flash
     render :partial => "layouts/flash"
   end
 
+  def help
+    Helper.instance
+  end
+
+  class Helper
+    include Singleton
+    include ActionView::Helpers::AssetTagHelper 
+  end
+  
   protected
+  
+  def set_page
+    @posts = Post.active
+    if session[:support_registered]
+      @hide_sidebar_form = true
+    else
+      @supporter = Supporter.new
+    end
+  end
 
   def current_user
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.user
   end
-  
+
   private
 
   def current_user_session
@@ -37,7 +56,7 @@ class ApplicationController < ActionController::Base
     if current_user
       store_location
       flash[:notice] = "You must be logged out to access this page"
-      redirect_to admin_user_url
+      redirect_to admin_index_url
       return false
     end
   end
@@ -50,5 +69,5 @@ class ApplicationController < ActionController::Base
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
   end
-  
+
 end

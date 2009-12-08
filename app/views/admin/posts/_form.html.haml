@@ -3,10 +3,30 @@
   %p
     = f.label :title
     %br
-    = f.text_field :title
+    = f.text_field :title, :size => 70 
+    
+  - if @post.new_record? 
+    %p
+      = f.label :permalink
+      %br
+      = f.text_field :permalink
+  - else
+    %p
+      %strong Permalink:
+      =h @post.permalink    
+  
   %p
     = f.label :body
     %br
     = f.text_area :body
+  %p
+    = f.label :tag_list
+    %br
+    = f.text_field :tag_list
+  %p
+    = f.label :posted_at
+    %br
+    = f.text_field :posted_at    
+    
   %p
     = f.submit "Submit"

@@ -11,26 +11,32 @@
   %body
     #header
       #logo
-        = image_tag("logo.png", :border => "0")
+        = link_to image_tag("logo.png", :border => "0"), root_url
     
       #subtitle
         = image_tag("subtitle.png", :border => "0")
-  
+
     #main
       = render :partial => "layouts/flash"
-    
-      .left
+
+      #content
+        - if show_title?
+          %h1.title
+            = yield(:title)
+
         = yield
 
       #sidebar
         = render :partial => "layouts/sidebar"
-    
+
     #supporters
-      = render :partial => "list"
-    
+      = render :partial => "supporters/list"
+
     #footer
       .small
         = mail_to "charlotte20@noctivity.com"
         %br
         (c) 2009/10 - 
         = link_to "Noctivity, Inc.", "http://www.noctivity.com"
+        
+    = yield(:footer)

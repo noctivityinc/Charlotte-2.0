@@ -1,4 +1,5 @@
-class Admin::PostsController < ApplicationController
+class Admin::PostsController < AdminController
+  
   before_filter :get_post, :except => [:index, :new, :create] 
   
   def index
@@ -9,7 +10,7 @@ class Admin::PostsController < ApplicationController
   end
   
   def new
-    @post = Post.new
+    @post = Post.new(:posted_at => Time.now)
   end
   
   def create
@@ -23,7 +24,6 @@ class Admin::PostsController < ApplicationController
   end
   
   def edit
-
   end
   
   def update
@@ -42,8 +42,7 @@ class Admin::PostsController < ApplicationController
   end
   
   private 
-  
     def get_post
-      @post = Post.find_by_id(params[:id])
+      @post = Post.find(params[:id])
     end
 end

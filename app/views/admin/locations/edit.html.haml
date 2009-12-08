@@ -1,0 +1,10 @@
+#location
+  #index
+    - title "Edit Location"
+
+    = render :partial => 'form'
+
+    %p
+      = link_to "Show", admin_location_path(@location)
+      |
+      = link_to "View All", admin_locations_path

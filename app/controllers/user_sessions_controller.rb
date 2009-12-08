@@ -1,5 +1,6 @@
 class UserSessionsController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create], :except => :destroy
+  layout "admin"
 
   def new
     @user_session = UserSession.new
@@ -9,7 +10,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash.message = "Login successful!"
-      redirect_back_or_default admin_session_url
+      redirect_back_or_default admin_index_url
     else
       render :action => :new
     end

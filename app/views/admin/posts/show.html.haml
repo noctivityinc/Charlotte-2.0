@@ -5,9 +5,20 @@
     %p
       %strong Title:
       =h @post.title
+    
+    %p
+      %strong Permalink:
+      =h @post.permalink    
+    
+    %p
+      %strong Posted At:
+      =h @post.posted_at
+    %p
+      %strong Tags:
+      =h @post.tag_list      
     %p
       %strong Body:
-      =h @post.body
+      = RedCloth.new(@post.body).to_html
 
     %p
       = link_to "Edit", edit_admin_post_path(@post)

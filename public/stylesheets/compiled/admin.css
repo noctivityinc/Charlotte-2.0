@@ -1,12 +1,8 @@
 /*
 Syntax error: Undefined variable: "!html_background".
-        on line 6 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass
+        on line 10 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass
         from line 16 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass
 
-1: @import blueprint/modules/colors.sass
-2: 
-3: !base_font_size = 11pt
-4: !h1 = !base_font_size + 12
 5: !base_link = darken(#0000FF,20)
 6: !page_bg = #F1F1F1
 7: 
@@ -14,45 +10,49 @@ Syntax error: Undefined variable: "!html_background".
 9: !header_font_color = #fff
 10: !header_border_color = #999
 11: 
+12: !content_bg_color = #fff
+13: !content_border_color = #CCC    
+14: !content_font_color = #333
+15: 
 
 Backtrace:
-/Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass:6
+/Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass:10
 /Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass:16
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/script/variable.rb:27:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/prop_node.rb:90:in `perform!'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/prop_node.rb:77:in `_perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:194:in `perform!'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/rule_node.rb:159:in `perform!'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/import_node.rb:38:in `perform!'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/root_node.rb:26:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:194:in `perform!'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/root_node.rb:26:in `perform'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:102:in `render'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:84:in `update_stylesheet'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:70:in `update_stylesheets'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:65:in `each'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:65:in `update_stylesheets'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:63:in `each'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin.rb:63:in `update_stylesheets'
-/Users/jlippiner/.gem/ruby/1.8/gems/haml-edge-2.3.53/lib/sass/plugin/rails.rb:16:in `process_without_compass'
-/Users/jlippiner/.gem/ruby/1.8/gems/chriseppstein-compass-0.8.16/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/script/variable.rb:27:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/prop_node.rb:90:in `perform!'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/prop_node.rb:77:in `_perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:194:in `perform!'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/rule_node.rb:159:in `perform!'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/import_node.rb:38:in `perform!'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/root_node.rb:26:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `map'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:203:in `perform_children'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:194:in `perform!'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:182:in `_perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:153:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/root_node.rb:26:in `perform'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/tree/node.rb:102:in `render'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin.rb:84:in `update_stylesheet'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin.rb:70:in `update_stylesheets'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin.rb:65:in `each'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin.rb:65:in `update_stylesheets'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin.rb:63:in `each'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin.rb:63:in `update_stylesheets'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/haml-edge-2.3.53/lib/sass/plugin/rails.rb:16:in `process_without_compass'
+/Users/jlippiner/Projects/charlotte20/vendor/gems/chriseppstein-compass-0.8.16/lib/compass/app_integration/rails/action_controller.rb:7:in `process'
 /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
 /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
 /Users/jlippiner/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
@@ -104,4 +104,4 @@ script/server:3
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"!html_background\".\A         on line 6 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass\A         from line 16 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass\A \A 1: @import blueprint/modules/colors.sass\A 2: \A 3: !base_font_size = 11pt\A 4: !h1 = !base_font_size + 12\A 5: !base_link = darken(#0000FF,20)\A 6: !page_bg = #F1F1F1\A 7: \A 8: !header_bg_color = #000\A 9: !header_font_color = #fff\A 10: !header_border_color = #999\A 11: "; }
+  content: "Syntax error: Undefined variable: \"!html_background\".\A         on line 10 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/partials/_application.sass\A         from line 16 of /Users/jlippiner/Projects/charlotte20/app/stylesheets/admin.sass\A \A 5: !base_link = darken(#0000FF,20)\A 6: !page_bg = #F1F1F1\A 7: \A 8: !header_bg_color = #000\A 9: !header_font_color = #fff\A 10: !header_border_color = #999\A 11: \A 12: !content_bg_color = #fff\A 13: !content_border_color = #CCC    \A 14: !content_font_color = #333\A 15: "; }

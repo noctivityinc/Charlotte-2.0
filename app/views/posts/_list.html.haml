@@ -1,0 +1,11 @@
+%h2 Latest Entries
+
+- @posts[0..4].each do |post|
+  .items
+    = link_to post.title, post
+    .alt
+      = post.posted_at.strftime('%B %d, %y')
+      
+- if @posts.size > 5
+  .items
+    %b= link_to "All Posts", posts_path(:all => true)

@@ -1,0 +1,48 @@
+- content_for :head do
+  :javascript
+    var disqus_developer = 1;
+
+#post
+  #show
+    - title @post.title
+    
+    .date
+      = @post.posted_at.strftime('%B %d, %Y')
+
+    - if @post.tag_list
+      .tags
+        %b filed: 
+        = @post.tag_list
+        
+    .permalink
+      %b permalink: 
+      = link_to permalink(@post)
+
+    .body
+      = RedCloth.new(@post.body).to_html
+      
+    .comments
+      #disqus_thread
+        %script{ :src => "http://disqus.com/forums/charlotte20/embed.js", :type => "text/javascript" }
+        %noscript
+          %a{ :href => "http://disqus.com/forums/charlotte20/?url=ref" }
+            View the discussion thread.
+        %a.dsq-brlink{ :href => "http://disqus.com" }
+          blog comments powered by
+          %span.logo-disqus
+            Disqus
+
+
+
+- content_for :footer do
+  :javascript
+    (function() {
+    	var links = document.getElementsByTagName('a');
+    	var query = '?';
+    	for(var i = 0; i < links.length; i++) {
+    	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+    		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+    	}
+    	}
+    	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/charlotte20/get_num_replies.js' + query + '"></' + 'script>');
+    })();

@@ -4,6 +4,9 @@ class AdminController < ApplicationController
 
   helper :admin
 
+  def index
+  end
+
   def show
   end
 

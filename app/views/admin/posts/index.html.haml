@@ -2,17 +2,21 @@
   #index
     - title "Posts"
 
-    %table
+    %table.fancy
       %tr
         %th Title
-        %th Body
+        %th Posted At
         %th(colspan="3")
       - for post in @posts
         %tr
-          %td= h post.title
-          %td= h post.body
+          %td
+            = h post.title
+            .alt
+              = h post.tag_list
+          %td= h post.posted_at
           %td= link_to 'Show', [:admin, post]
           %td= link_to 'Edit', edit_admin_post_path(post)
           %td= link_to 'Destroy', [:admin, post], :confirm => 'Are you sure?', :method => :delete
 
+    %br
     %p= link_to "+ New Post", new_admin_post_path
