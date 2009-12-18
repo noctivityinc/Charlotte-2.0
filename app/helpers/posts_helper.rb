@@ -7,6 +7,7 @@ module PostsHelper
   def permalink(post)
     "http://#{request.host}/posts/#{@post.permalink}"
   end
+ 
 
 end
 

@@ -1,18 +1,15 @@
-#posts
-  - @posts.each_with_index do |post,ndx|
-    .post(class="#{'top' if ndx==0}")
-      %h1.title
-        = link_to post.title, post
-      
-      .date
-        = post.posted_at.strftime('%B %d, %Y')
+
+- content_for :masthead do
+  = render :partial => 'partials/root/masthead'
+
+
+- content_for :map do
+  = render :partial => 'partials/root/map'
+
+
+- content_for :sidebar do 
+  =render :partial => 'shared/sidebar'
+
+
+= render :partial => 'shared/posts', :collection => @posts, :as => :post
   
-      - if @posts.size == 1
-        .body
-          = RedCloth.new(post.body).to_html
-      - else
-        .summary
-          = h summary(post.body)
-          
-        .read_more
-          = link_to "Read More...", post

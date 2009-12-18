@@ -9,19 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091207194150) do
-
-  create_table "locations", :force => true do |t|
-    t.string   "name"
-    t.integer  "location_type_id"
-    t.string   "address"
-    t.string   "zip"
-    t.string   "note"
-    t.string   "phone"
-    t.string   "city"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20091207190553) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"

@@ -1,5 +1,5 @@
 class PublicController < ApplicationController
-  layout "public"
+  layout 'deep_blue'
   helper :all # include all helpers, all the time
 
   def index
