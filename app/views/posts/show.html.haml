@@ -2,25 +2,29 @@
   :javascript
     var disqus_developer = 1;
 
+-content_for :sidebar do
+  = render :partial => 'shared/sidebar'
+
+
 #post
   #show
     - title @post.title
     
     .date
       = @post.posted_at.strftime('%B %d, %Y')
-
+      
+    .body
+      = RedCloth.new(@post.body).to_html
+      
     - if @post.tag_list
       .tags
         %b filed: 
         = @post.tag_list
         
-    .permalink
-      %b permalink: 
-      = link_to permalink(@post)
-
-    .body
-      = RedCloth.new(@post.body).to_html
-      
+      .permalink
+        %b permalink: 
+        = link_to permalink(@post)
+        
     .comments
       #disqus_thread
         %script{ :src => "http://disqus.com/forums/charlotte20/embed.js", :type => "text/javascript" }

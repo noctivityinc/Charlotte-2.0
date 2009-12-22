@@ -1,0 +1,13 @@
+.latest_entries
+  %h2 Latest Entries
+  
+  - @posts[0..4].each do |post|
+    %dl
+      %dt
+        = link_to post.title, post
+      %dd
+        = post.posted_at.strftime('%B %d, %y')
+      
+  - if @posts.size > 5
+    %p.small-btn
+      = link_to "all post #{image_tag('small-tic.png')}", posts_path(:all => true)

@@ -2,8 +2,8 @@ class PostsController < PublicController
   before_filter :get_post, :except => [:index, :new, :create] 
   
   def index
-    @posts = Post.active[0..10] unless params[:all]
-     #@posts = Post.all
+    #@posts = Post.active[0..10] unless params[:all]
+    @posts = Post.all
      @supporters = Supporter.all
   end
   
