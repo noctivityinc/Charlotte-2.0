@@ -5,41 +5,46 @@
     %title
       = h(yield(:title) || "The Charlotte 2.0 Internet Initiative") 
     = javascript_include_tag "controllers/#{params[:controller]}"
-    
+    = javascript_include_tag 'jquery-1.3.2.min.js'
+    = javascript_include_tag 'application.js'
     = stylesheet_link_tag 'compiled/deep_blue.css'
-    
     = yield(:head)
   
   -# needed some extra hooks 
   %body{:id => controller.controller_name, :class => controller.action_name}
-  
-  #header
-    = render :partial => 'partials/root/header'
-    .clear
-  
-  -# blueprint wrapper
-  %div{:class => 'container '}
     
-    #masthead
-      = yield :masthead
-      .clear
-      
-    = yield :map
+    = render :partial => "layouts/flash"
     
-    -# wrapper need for bg image  
-    #content
-      #main-column{:class => 'span-16 first'}
-        = yield
-      
-      #sidebar{:class => 'span-7 last' }
-        %h2{:class => 'twitter'}
-          @charlotte2dot0
-        -# needed wrapper for sidebar to fix a margin issues
-        .content
-          = yield :sidebar
+    #header
+      = render :partial => 'partials/root/header'
       .clear
+  
+    -# blueprint wrapper
+    .container
+      #masthead
+        = yield :masthead
+        .clear
+      = yield :inline_masthead_content
       
-    #supporters
-      = render :partial => "supporters/deep_blue_list"
+      = yield :map
+    
+      -# wrapper need for bg image  
+      #content
+        #main-column.span-16.first
+          %h1
+            = yield(:title)
+          
+          = yield
       
+        #sidebar.span-7.last
+          %h2.twitter.small-btn
+            %a{:href=>'http://twitter.com/charlotte2dot0'}
+              You should follow us on Twitter 
+            
+          -# needed wrapper for sidebar to fix a margin issues
+          .content
+            = yield :sidebar
+        .clear
       
+      #supporters
+        = render :partial => "supporters/deep_blue_list"

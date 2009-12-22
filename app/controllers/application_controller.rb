@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
     @posts = Post.active
     if session[:support_registered]
       @hide_sidebar_form = true
+      @supporter = Supporter.new
     else
       @supporter = Supporter.new
     end

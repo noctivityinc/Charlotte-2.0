@@ -1,12 +1,12 @@
 .post
   %h1
     = link_to post.title, post
-  %h2{ :class => 'date' } 
+  %h2.date
     = post.posted_at.strftime('%m/%d/%y')
   .summary
     = h summary(post.body)
   %span
-    %p{:class => 'small-btn'}
+    %p.small-btn
       = link_to "read more #{image_tag('small-tic.png')}", post
       
   .clear

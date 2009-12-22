@@ -1,9 +1,14 @@
-%div{ :class => 'span-16 first open-letter' }
-  %h2 A open letter to the Charlotte Community
+%div.span-16.first.open-letter
+  %h2 
+    %a An Open Letter to the Charlotte Community
 
-%div{ :class => 'span-7 last support' }
+%div.span-7.last.support
   %h2 Show your support for Charlotte 2.0
-  %p{:class => 'small-btn'} 
-    = link_to "read more #{image_tag('small-tic.png')}"
+  %p.small-btn
+    = link_to "read more #{image_tag('small-tic.png')}",(), :id => 'support'
+    
+- content_for :inline_masthead_content do
+  %div(id='inline-support' style='display:none')
+    = render :partial => 'supporters/deep_blue_new'
   
   
