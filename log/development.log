@@ -56272,3 +56272,295 @@ Rendered partials/root/_header (0.9ms)
   [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
 Rendered supporters/_deep_blue_list (13.7ms)
 Completed in 161ms (View: 96, DB: 7) | 200 OK [http://127.0.0.1/posts]
+** acts_as_taggable_on: initialized properly.
+** acts_as_taggable_on: initialized properly.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:29:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (20.5ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (219.3ms)
+Rendered partials/root/_masthead (245.9ms)
+Rendered partials/root/_map (7.2ms)
+  [4;35;1mPost Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (376.7ms)
+Rendered shared/_sidebar (393.7ms)
+Rendered shared/_posts (9.3ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (4.7ms)
+Rendered shared/_posts (4.6ms)
+Rendered layouts/_flash (12.3ms)
+Rendered partials/root/_header (5.9ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (24.5ms)
+Completed in 1071ms (View: 983, DB: 25) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:33:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (15.3ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.6ms)
+Rendered partials/root/_masthead (25.1ms)
+Rendered partials/root/_map (7.2ms)
+  [4;35;1mPost Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (20.4ms)
+Rendered shared/_sidebar (22.0ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.8ms)
+Rendered shared/_posts (3.2ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.6ms)
+Rendered shared/_posts (4.2ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.7ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.4ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (12.9ms)
+Completed in 190ms (View: 115, DB: 19) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:33:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.1ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.6ms)
+Rendered partials/root/_masthead (24.7ms)
+Rendered partials/root/_map (7.9ms)
+  [4;35;1mPost Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (21.1ms)
+Rendered shared/_sidebar (22.7ms)
+Rendered shared/_posts (3.7ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.5ms)
+Rendered shared/_posts (4.4ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.8ms)
+  [4;36;1mSupporter Load (0.4ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.4ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (12.9ms)
+Completed in 180ms (View: 114, DB: 8) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:34:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.4ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.0ms)
+Rendered partials/root/_masthead (23.9ms)
+Rendered partials/root/_map (7.7ms)
+  [4;35;1mPost Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (18.7ms)
+Rendered shared/_sidebar (20.3ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.2ms)
+Rendered shared/_posts (3.2ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.5ms)
+Rendered shared/_posts (4.4ms)
+Rendered layouts/_flash (1.1ms)
+Rendered partials/root/_header (1.7ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.4ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (13.3ms)
+Completed in 177ms (View: 115, DB: 7) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:35:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.1ms)
+Rendered partials/root/_masthead (23.9ms)
+Rendered partials/root/_map (1.3ms)
+  [4;35;1mPost Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (24.3ms)
+Rendered shared/_sidebar (26.2ms)
+Rendered shared/_posts (3.7ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.5ms)
+Rendered shared/_posts (4.2ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.7ms)
+  [4;36;1mSupporter Load (1.2ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (14.8ms)
+Completed in 166ms (View: 101, DB: 8) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:35:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.4ms)
+Rendered partials/root/_masthead (24.9ms)
+Rendered partials/root/_map (1.1ms)
+  [4;35;1mPost Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (18.6ms)
+Rendered shared/_sidebar (20.0ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.7ms)
+Rendered shared/_posts (3.6ms)
+Rendered shared/_posts (3.6ms)
+Rendered shared/_posts (3.9ms)
+Rendered shared/_posts (4.6ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.8ms)
+  [4;36;1mSupporter Load (0.4ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.4ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (13.5ms)
+Completed in 161ms (View: 97, DB: 7) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:36:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.4ms)
+Rendered partials/root/_masthead (24.7ms)
+Rendered partials/root/_map (7.7ms)
+  [4;35;1mPost Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (19.4ms)
+Rendered shared/_sidebar (20.9ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.1ms)
+Rendered shared/_posts (3.2ms)
+Rendered shared/_posts (3.7ms)
+Rendered shared/_posts (4.2ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.8ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.4ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (14.1ms)
+Completed in 175ms (View: 113, DB: 7) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:36:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.2ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.4ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (24.1ms)
+Rendered partials/root/_masthead (28.8ms)
+Rendered partials/root/_map (9.1ms)
+  [4;35;1mPost Columns (4.3ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (25.2ms)
+Rendered shared/_sidebar (27.1ms)
+Rendered shared/_posts (4.4ms)
+Rendered shared/_posts (4.4ms)
+Rendered shared/_posts (4.0ms)
+Rendered shared/_posts (4.5ms)
+Rendered shared/_posts (4.6ms)
+Rendered shared/_posts (5.2ms)
+Rendered layouts/_flash (1.0ms)
+Rendered partials/root/_header (0.9ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (17.8ms)
+Completed in 220ms (View: 140, DB: 10) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:38:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (24.9ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (20.2ms)
+Rendered partials/root/_masthead (24.8ms)
+Rendered partials/root/_map (6.5ms)
+  [4;35;1mPost Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (18.5ms)
+Rendered shared/_sidebar (20.1ms)
+Rendered shared/_posts (3.5ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.1ms)
+Rendered shared/_posts (3.3ms)
+Rendered shared/_posts (3.6ms)
+Rendered shared/_posts (4.3ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.8ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.5ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (13.1ms)
+Completed in 196ms (View: 111, DB: 29) | 200 OK [http://127.0.0.1/posts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-01-04 10:38:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mSupporter Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `supporters`[0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM `posts` WHERE (posted_at <= NOW()) ORDER BY posted_at desc[0m
+  [4;36;1mSupporter Load (0.3ms)[0m   [0;1mSELECT * FROM `supporters` [0m
+Rendering template within layouts/deep_blue
+Rendering posts/index
+Rendered supporters/_deep_blue_new (24.4ms)
+Rendered partials/root/_masthead (28.3ms)
+Rendered partials/root/_map (6.5ms)
+  [4;35;1mPost Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `posts`[0m
+Rendered shared/_latest_entries (18.8ms)
+Rendered shared/_sidebar (20.4ms)
+Rendered shared/_posts (3.4ms)
+Rendered shared/_posts (3.2ms)
+Rendered shared/_posts (3.1ms)
+Rendered shared/_posts (3.5ms)
+Rendered shared/_posts (3.5ms)
+Rendered shared/_posts (4.2ms)
+Rendered layouts/_flash (0.8ms)
+Rendered partials/root/_header (0.8ms)
+  [4;36;1mSupporter Load (0.5ms)[0m   [0;1mSELECT * FROM `supporters` WHERE (logo_file_name IS NOT NULL) [0m
+  [4;35;1mSupporter Load (0.4ms)[0m   [0mSELECT * FROM `supporters` WHERE (logo_file_name IS NULL) [0m
+Rendered supporters/_deep_blue_list (12.9ms)
+Completed in 176ms (View: 113, DB: 7) | 200 OK [http://127.0.0.1/posts]

@@ -209,6 +209,19 @@ body#posts.show #masthead {
   #map span {
     float: right;
     padding: 5px 0 10px; }
+  /* line 84, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+  #map p#map-text {
+    margin: 10px 0;
+    background: #041c2f;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    color: #FFF; }
 
 /* line 1, ../../../app/stylesheets/partials/deep_blue/_main_column.sass */
 body#posts.show #main-column {
