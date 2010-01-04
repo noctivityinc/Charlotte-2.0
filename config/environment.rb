@@ -23,7 +23,8 @@ Rails::Initializer.run do |config|
   config.gem 'chriseppstein-compass-colors', :source => "http://gems.github.com",  :lib => 'compass'
   config.gem 'thoughtbot-paperclip', :lib => 'paperclip', :source => 'http://gems.github.com'
   config.gem "acts-as-taggable-on", :source => "http://gemcutter.org"
-  config.gem "RedCloth", :lib => 'redcloth', :version => ">= 4.0"
+  # config.gem "RedCloth", :lib => 'redcloth', :version => ">= 4.0"
+  config.gem "RedCloth"
   config.gem "friendly_id"
 
   # Only load the plugins named here, in the order given (default is alphabetical).

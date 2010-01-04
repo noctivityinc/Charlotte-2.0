@@ -3,6 +3,9 @@ class PostsController < PublicController
   
   def index
     @posts = Post.active[0..10] unless params[:all]
+    #@posts = Post.all
+     @supporters = Supporter.all
+     session[:support_registered] = nil
   end
   
   def show
