@@ -131,7 +131,7 @@ body#posts.show #masthead {
 #inline-support {
   color: #FFF;
   margin: 0 0 10px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   background: #041c2f;
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -142,18 +142,26 @@ body#posts.show #masthead {
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-right-radius: 5px; }
   /* line 42, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
-  #inline-support .content h2 {
-    color: #005fa1;
-    font-weight: bold;
-    margin: 0 0 0.5em; }
-  /* line 47, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
-  #inline-support .content p {
-    text-align: justify;
-    margin: 0 0 1.0em;
-    font-size: 1.2em;
-    line-height: 1.3em; }
+  #inline-support .content {
+    margin: 0;
+    width: 320px; }
+    /* line 46, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+    #inline-support .content h2 {
+      color: #005fa1;
+      font-weight: bold;
+      margin: 0 0 0.5em; }
+    /* line 51, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+    #inline-support .content p {
+      text-align: justify;
+      margin: 0 0 1.0em;
+      font-size: 1.2em;
+      line-height: 1.3em; }
+  /* line 57, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+  #inline-support .form {
+    margin: 6px 0 4px 0px;
+    width: 560px; }
 
-/* line 53, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+/* line 61, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
 #map {
   padding: 5px 10px 10px;
   background: #0d3d69;
@@ -161,7 +169,7 @@ body#posts.show #masthead {
   -webkit-border-top-left-radius: 5px;
   -moz-border-radius-topright: 5px;
   -webkit-border-top-right-radius: 5px; }
-  /* line 59, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+  /* line 67, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
   #map h2 {
     margin: 0;
     padding: 2px 0 5px;
@@ -194,10 +202,10 @@ body#posts.show #masthead {
   /* line 59, ../../../app/stylesheets/partials/deep_blue/_base.sass */
   #map p.small-btn img {
     padding: 0 0 0 4px; }
-  /* line 69, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+  /* line 77, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
   #map p {
     text-align: center; }
-  /* line 72, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
+  /* line 80, ../../../app/stylesheets/partials/deep_blue/_masthead.sass */
   #map span {
     float: right;
     padding: 5px 0 10px; }
@@ -1502,20 +1510,21 @@ textarea {
 
 /* line 11, ../../../app/stylesheets/partials/deep_blue/_application.sass */
 fieldset {
-  border: none; }
+  border: none;
+  margin: 0; }
 
-/* line 15, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+/* line 16, ../../../app/stylesheets/partials/deep_blue/_application.sass */
 body {
   background: #005fa1;
   margin: 0px auto 0; }
 
-/* line 19, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+/* line 20, ../../../app/stylesheets/partials/deep_blue/_application.sass */
 body.support {
   margin: 0px auto 0; }
-  /* line 22, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+  /* line 23, ../../../app/stylesheets/partials/deep_blue/_application.sass */
   body.support .container {
     margin-top: 10px; }
-  /* line 25, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+  /* line 26, ../../../app/stylesheets/partials/deep_blue/_application.sass */
   body.support #content {
     background: #041c2f;
     margin: 10px 0;
@@ -1529,11 +1538,11 @@ body.support {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-right-radius: 5px; }
 
-/* line 32, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+/* line 33, ../../../app/stylesheets/partials/deep_blue/_application.sass */
 #content {
   background: #FFF url(/images/content-bg.jpg) repeat-y top center; }
 
-/* line 37, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+/* line 38, ../../../app/stylesheets/partials/deep_blue/_application.sass */
 p {
   margin: 0; }
 
@@ -1564,11 +1573,11 @@ p.small-btn a:hover {
 p.small-btn img {
   padding: 0 0 0 4px; }
 
-/* line 43, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+/* line 44, ../../../app/stylesheets/partials/deep_blue/_application.sass */
 #flash_messages {
   margin: 0 0 0px;
   padding: 0; }
-  /* line 48, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+  /* line 49, ../../../app/stylesheets/partials/deep_blue/_application.sass */
   #flash_messages p.notice {
     background-color: #0d3d69;
     border: none;
@@ -1577,7 +1586,7 @@ p.small-btn img {
     color: #e1f3ff;
     margin: 0;
     font-weight: bold; }
-  /* line 57, ../../../app/stylesheets/partials/deep_blue/_application.sass */
+  /* line 58, ../../../app/stylesheets/partials/deep_blue/_application.sass */
   #flash_messages p.error {
     background-color: #fef8ca;
     border: 5px solid #FBEB67;
