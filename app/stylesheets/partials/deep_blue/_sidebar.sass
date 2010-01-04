@@ -5,6 +5,7 @@
   margin: 0 0 0 -10px
   border-top: 10px solid !light
   position: relative
+  +round-tr
   
   .content
     margin: 0 0 0 -45px
@@ -97,4 +98,26 @@ dl#linkedin
     padding: 0 5px 1px
     background= !light
     +round
+    
+.map
+  background= #CCEBFF
+  margin: 10px 5px 0 0
+  padding: 0 0 3px
+  position: relative
+  +round
   
+  h2
+    font-size: 1.4em
+    color= !base
+    font-weight: bold
+    margin: 0
+    padding: 0 5px 1px
+    background= !light
+    +round
+    
+  p.small-btn
+    position: absolute
+    top: 4px
+    right: 3px
+    font-size: 0.9em
+    +small-btn(!base,!lighter)
