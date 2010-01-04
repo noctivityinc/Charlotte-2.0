@@ -15,7 +15,7 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem "haml-edge", :version => '>=2.3.53', :lib => 'haml'
+  # config.gem "haml-edge", :version => '>=2.3.53', :lib => 'haml'
   config.gem "authlogic"
   config.gem "highline"
   config.gem "thoughtbot-shoulda", :lib => "shoulda", :source => "http://gems.github.com"

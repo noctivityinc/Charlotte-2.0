@@ -1,0 +1,88 @@
+body#posts.show #masthead
+  padding: 0 0 5px
+
+#masthead
+  padding: 40px 0 20px
+  background= "url(/images/graident.png) no-repeat top center"
+   
+  .open-letter h2
+    background= "url(/images/envelope.png) no-repeat top left"
+    padding: 8px 0 25px 102px
+    margin: 0
+    
+    
+    a
+      color: #FFF
+      text-decoration: none
+      
+      &:hover
+        text-decoration: underline
+   
+   
+  .support  
+    background= "url(/images/coffee-cup.png) no-repeat top left"
+   
+    h2
+      font-size: 1.2em
+      margin: 0 0 3px
+      padding: 10px 0 00px 106px
+      line-height: 1.2em
+      color: #FFF
+     
+    p
+      margin: 0px 0 0px 106px
+      
+#inline-support
+  color: #FFF
+  margin: 0 0 10px
+  padding: 10px 15px
+  background= !darkest
+  +round
+  
+  .content
+    margin: 0
+    width: 320px
+  
+    h2
+      color= !base
+      font-weight: bold
+      margin: 0 0 0.5em
+    
+    p
+      text-align: justify
+      margin: 0 0 1.0em
+      font-size: 1.2em
+      line-height: 1.3em
+    
+  .form
+    margin: 6px 0 4px 0px
+    width: 560px
+ 
+#map
+  padding: 5px 10px 10px
+  background= !dark
+  +round-tl(5px)
+  +round-tr(5px)
+   
+  h2
+    margin: 0
+    padding: 2px 0 5px
+    color: #FFF
+    font-size: 1.4em
+    float: left
+  
+  p.small-btn
+    +small-btn(!base,!lighter)
+  
+  p
+    text-align: center
+    
+  span
+    float: right
+    padding: 5px 0 10px
+    
+  p#map-text
+    margin: 10px 0
+    background= !darkest
+    +round
+    color: #FFF
