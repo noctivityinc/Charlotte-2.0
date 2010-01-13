@@ -15,7 +15,7 @@ class Admin::PostsController < AdminController
   
   def create
     @post = Post.new(params[:post])
-    if @post.save
+    if @post.save!
       flash[:notice] = "Successfully created post."
       redirect_to [:admin, @post]
     else
